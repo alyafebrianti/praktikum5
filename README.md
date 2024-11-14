@@ -2,7 +2,7 @@
 ## Nim      : 312410692
 ## Kelas    : TI.24.A1
 
-## Latihan 1
+## Latihan Praktikum 5
 ## Hasil Input
 ```Python
 data_mahasiswa = []
