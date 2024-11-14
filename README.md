@@ -1,3 +1,6 @@
+## Nama     : Alya Febrianti
+## Nim      : 312410692
+## Kelas    : TI.24.A1
 
 ## Latihan 1
 ## Hasil Input
@@ -136,6 +139,7 @@ Penjelasan Lebih Detail:
 `:<15`: Menentukan lebar kolom untuk setiap data, misalnya `nama` akan memiliki lebar 15 karakter.
 `.2f`: Memformat nilai akhir dengan 2 angka di belakang koma.
 
-
+# Flowchart
+![Flowchart](img/flowchart.jpg)
 
 
