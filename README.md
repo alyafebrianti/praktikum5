@@ -1,5 +1,6 @@
 
 ## Latihan 1
+## Hasil Input
 ```Python
 data_mahasiswa = []
 
