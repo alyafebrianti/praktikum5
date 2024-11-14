@@ -5,7 +5,9 @@
 data_mahasiswa = []
 
 while True:
-    print("\nMasukkan data mahasiswa:")
+    print("="*23)
+    print("Masukkan Data Mahasiswa")
+    print("="*23)
     nama = input("Nama: ")
     nim = input("NIM: ")
     tugas = float(input("Nilai Tugas: "))
@@ -15,46 +17,103 @@ while True:
     nilai_akhir = (tugas * 0.3) + (uts * 0.35) + (uas * 0.35)
 
     data_mahasiswa.append({
-        'nama': nama,
-        'nim': nim,
-        'tugas': tugas,
-        'uts': uts,
-        'uas': uas,
-        'nilai_akhir': nilai_akhir
+        "nama": nama,
+        "nim": nim,
+        "tugas": tugas,
+        "uts": uts,
+        "uas": uas,
+        "nilai_akhir": nilai_akhir
     })
 
-    tambah = input("\nTambah data lagi? (y/t): ").lower()
-    if tambah == 't':
+    tambah_data = input("Tambah Data(y/t)? ")
+    if tambah_data == 't':
         break
 
-print("\nDaftar Nilai Mahasiswa:")
-print("="*80)
-print(f"{'Nama':<15} {'NIM':<10} {'Tugas':<10} {'UTS':<10} {'UAS':<10} {'Nilai Akhir':<10}")
-print("="*80)
+# Lebar kolom untuk setiap data
+print("=" * 95)
+print(f"{'No'.center(5)}|{'Nama'.center(15)}|{'NIM'.center(10)}|{'Nilai Tugas'.center(13)}|{'Nilai UTS'.center(10)}|{'Nilai UAS'.center(10)}|{'Nilai Akhir'.center(10)}")
+print("=" * 95)
 
-for mhs in data_mahasiswa:
-    print(f"{mhs['nama']:<15} {mhs['nim']:<10} {mhs['tugas']:<10} {mhs['uts']:<10} {mhs['uas']:<10} {mhs['nilai_akhir']:<10.2f}")
-
-print("="*80)
+for i, mhs in enumerate(data_mahasiswa, start=1):
+    print(f"{str(i).center(5)}|{mhs['nama'].center(15)}|{mhs['nim'].center(10)}|{str(mhs['tugas']).center(13)}|{str(mhs['uts']).center(10)}|{str(mhs['uas']).center(10)}|{format(mhs['nilai_akhir'], '.2f').center(10)}")
 
 ```
 ## Hasil Output
 ````Markdown
-Masukkan data mahasiswa:
-Nama: Alya Febrianti
-NIM: 312410692
-Nilai Tugas: 90
-Nilai UTS: 98
-Nilai UAS: 100
-
-Tambah data lagi? (y/t): t
-
-Daftar Nilai Mahasiswa:
-================================================================================
-Nama            NIM        Tugas      UTS        UAS        Nilai Akhir
-================================================================================
-Alya Febrianti  312410692  90.0       98.0       100.0      96.30
-================================================================================
+=======================
+Masukkan Data Mahasiswa
+=======================
+Nama: Alya  
+NIM: 3124
+Nilai Tugas: 99
+Nilai UTS: 99
+Nilai UAS: 99
+Tambah Data(y/t)? y
+=======================
+Masukkan Data Mahasiswa
+=======================
+Nama: aldi
+NIM: 3124
+Nilai Tugas: 99
+Nilai UTS: 99
+Nilai UAS: 99
+Tambah Data(y/t)? y
+=======================
+Masukkan Data Mahasiswa
+=======================
+Nama: sela
+NIM: 3124
+Nilai Tugas: 99
+Nilai UTS: 99
+Nilai UAS: 99
+Tambah Data(y/t)? y
+=======================
+Masukkan Data Mahasiswa
+=======================
+Nama: khusnul
+NIM: 3124
+Nilai Tugas: 99
+Nilai UTS: 99
+Nilai UAS: 99
+Tambah Data(y/t)? y
+=======================
+Masukkan Data Mahasiswa
+=======================
+Nama: uswah
+NIM: 3124
+Nilai Tugas: 99
+Nilai UTS: 99
+Nilai UAS: 99
+Tambah Data(y/t)? y
+=======================
+Masukkan Data Mahasiswa
+=======================
+Nama: veli
+NIM: 3124
+Nilai Tugas: 99
+Nilai UTS: 99
+Nilai UAS: 99
+Tambah Data(y/t)? y
+=======================
+Masukkan Data Mahasiswa
+=======================
+Nama: agus
+NIM: 3124
+Nilai Tugas: 99
+Nilai UTS: 99
+Nilai UAS: 99
+Tambah Data(y/t)? t
+===============================================================================================
+  No |      Nama     |   NIM    | Nilai Tugas |Nilai UTS |Nilai UAS |Nilai Akhir
+===============================================================================================
+  1  |      Alya     |   3124   |     99.0    |   99.0   |   99.0   |  99.00
+  2  |      aldi     |   3124   |     99.0    |   99.0   |   99.0   |  99.00   
+  3  |      sela     |   3124   |     99.0    |   99.0   |   99.0   |  99.00
+  4  |    khusnul    |   3124   |     99.0    |   99.0   |   99.0   |  99.00
+  5  |     uswah     |   3124   |     99.0    |   99.0   |   99.0   |  99.00
+  6  |      veli     |   3124   |     99.0    |   99.0   |   99.0   |  99.00
+  7  |      agus     |   3124   |     99.0    |   99.0   |   99.0   |  99.00
+ 
 ````
 ## Penjelasan Hasil Pemrograman Sederhana
 ## Analisis Kode Python untuk Input dan Perhitungan Nilai Mahasiswa
